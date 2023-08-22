@@ -34,6 +34,7 @@ void font_print (Surface *surface, char *text, uint16_t x, uint16_t y, uint16_t 
 
 
 const char font_7x7[] = "" \
+    //SPACE 0x20
     "       " \
     "       " \
     "       " \
@@ -789,6 +790,15 @@ const char font_7x7[] = "" \
     "       " \
     " ##   #" \
     "#  ### " \
+    "       " \
+    "       " \
+    "       " \
+    "       " \
+    \
+    //DEL 0x7F
+    "       " \
+    "       " \
+    "       " \
     "       " \
     "       " \
     "       " \
