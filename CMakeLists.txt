@@ -5,7 +5,6 @@
 ### Optional...
 ### `export PICO_PLATFORM=rp2040` to designate RP2040 target
 
-
 ### Import pico-sdk...
 cmake_minimum_required(VERSION 3.12)
 include(pico_sdk_import.cmake)
@@ -19,10 +18,9 @@ pico_sdk_init()
 ### Add Subdirectories to include source files from here...
 ### e.g.: add_subdirectory(mylibs/mylibrary)
 
-
 ### Add include directories here...
 ### e.g.. include_directories(./includes/mylibrary)
-include_directories(./include)
+include_directories(./include ./basicvm)
 
 ### Define the output executable...
 add_executable(main 
@@ -30,7 +28,12 @@ main.c
 surface.c
 lcd.c
 font.c
+font_5x5.c
+font_7x7.c
 sprite.c
+basicvm/vm.c
+basicvm/instructions.c
+basicvm/interrupts.c
 )
 
 
